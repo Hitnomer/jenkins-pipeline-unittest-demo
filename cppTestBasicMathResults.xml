@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding='ISO-8859-1' standalone='yes' ?>
+<TestRun>
+  <FailedTests>
+    <FailedTest id="1">
+      <Name>TestBasicMath::testAddition</Name>
+      <FailureType>Assertion</FailureType>
+      <Location>
+        <File>TestBasicMath.cpp</File>
+        <Line>49</Line>
+      </Location>
+      <Message>assertion failed
+- Expression: 7 == mTestObj-&gt;Addition(2,3)
+</Message>
+    </FailedTest>
+  </FailedTests>
+  <SuccessfulTests>
+    <Test id="2">
+      <Name>TestBasicMath::testMultiply</Name>
+    </Test>
+  </SuccessfulTests>
+  <Statistics>
+    <Tests>2</Tests>
+    <FailuresTotal>1</FailuresTotal>
+    <Errors>0</Errors>
+    <Failures>1</Failures>
+  </Statistics>
+</TestRun>
