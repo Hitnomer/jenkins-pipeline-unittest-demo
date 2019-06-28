@@ -25,7 +25,9 @@ class TestBasicMath : public CppUnit::TestFixture
 {
     CPPUNIT_TEST_SUITE(TestBasicMath);
     CPPUNIT_TEST(testAddition);
+    CPPUNIT_TEST(testSubtraction);
     CPPUNIT_TEST(testMultiply);
+    CPPUNIT_TEST(testDivision);
     CPPUNIT_TEST_SUITE_END();
 
 public:
@@ -34,7 +36,9 @@ public:
 
 protected:
     void testAddition(void);
+    void testSubtraction(void);
     void testMultiply(void);
+    void testDivision(void);
 
 private:
 
@@ -46,14 +50,49 @@ private:
 void
 TestBasicMath::testAddition(void)
 {
-    CPPUNIT_ASSERT(7 == mTestObj->Addition(2,3));
+    CPPUNIT_ASSERT(5 == mTestObj->Addition(2, 3));
 }
+
+/*
+void
+TestBasicMath::testAddition(void)
+{
+    CPPUNIT_ASSERT(7 == mTestObj->Addition(2, 3));
+}
+*/
+void
+TestBasicMath::testSubtraction(void)
+{
+    CPPUNIT_ASSERT(15 == mTestObj->Subtraction(10, 5));
+}
+
+/*
+void
+TestBasicMath::testSubtraction(void)
+{
+    CPPUNIT_ASSERT(7 == mTestObj->Addition(12, 3));
+}
+*/
 
 void
 TestBasicMath::testMultiply(void)
 {
-    CPPUNIT_ASSERT(6 == mTestObj->Multiply(2,3));
+    CPPUNIT_ASSERT(6 == mTestObj->Multiply(2, 3));
 }
+
+void
+TestBasicMath::testDivision(void)
+{
+    CPPUNIT_ASSERT(6 == mTestObj->Division(36, 6));
+}
+
+/*
+void
+TestBasicMath::testDivision(void)
+{
+    CPPUNIT_ASSERT(7 == mTestObj->Multiply(36, 6));
+}
+*/
 
 void TestBasicMath::setUp(void)
 {

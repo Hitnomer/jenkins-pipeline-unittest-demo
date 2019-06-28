@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding='ISO-8859-1' standalone='yes' ?>
 <TestRun>
   <FailedTests>
-    <FailedTest id="1">
-      <Name>TestBasicMath::testAddition</Name>
+    <FailedTest id="2">
+      <Name>TestBasicMath::testSubtraction</Name>
       <FailureType>Assertion</FailureType>
       <Location>
         <File>TestBasicMath.cpp</File>
-        <Line>49</Line>
+        <Line>66</Line>
       </Location>
       <Message>assertion failed
-- Expression: 7 == mTestObj-&gt;Addition(2,3)
+- Expression: 15 == mTestObj-&gt;Subtraction(10, 5)
 </Message>
     </FailedTest>
   </FailedTests>
   <SuccessfulTests>
-    <Test id="2">
+    <Test id="1">
+      <Name>TestBasicMath::testAddition</Name>
+    </Test>
+    <Test id="3">
       <Name>TestBasicMath::testMultiply</Name>
+    </Test>
+    <Test id="4">
+      <Name>TestBasicMath::testDivision</Name>
     </Test>
   </SuccessfulTests>
   <Statistics>
-    <Tests>2</Tests>
+    <Tests>4</Tests>
     <FailuresTotal>1</FailuresTotal>
     <Errors>0</Errors>
     <Failures>1</Failures>
