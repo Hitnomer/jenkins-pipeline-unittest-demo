@@ -63,7 +63,7 @@ TestBasicMath::testAddition(void)
 void
 TestBasicMath::testSubtraction(void)
 {
-    CPPUNIT_ASSERT(15 == mTestObj->Subtraction(10, 5));
+    CPPUNIT_ASSERT(5 == mTestObj->Subtraction(10, 5));
 }
 
 /*
