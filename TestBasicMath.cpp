@@ -24,10 +24,18 @@ using namespace std;
 class TestBasicMath : public CppUnit::TestFixture
 {
     CPPUNIT_TEST_SUITE(TestBasicMath);
-    CPPUNIT_TEST(testAddition);
-    CPPUNIT_TEST(testSubtraction);
-    CPPUNIT_TEST(testMultiply);
-    CPPUNIT_TEST(testDivision);
+    CPPUNIT_TEST(testAdditionSuccess);
+    CPPUNIT_TEST(testAdditionFailure);
+    CPPUNIT_TEST(testAdditionNegative);
+    CPPUNIT_TEST(testSubtractionSuccess);
+    CPPUNIT_TEST(testSubtractionFailure);
+    CPPUNIT_TEST(testSubtractionNegative);
+    CPPUNIT_TEST(testMultiplySuccess);
+    CPPUNIT_TEST(testMultiplyFailure);
+    CPPUNIT_TEST(testMultiplyNegative);
+    CPPUNIT_TEST(testDivisionSuccess);
+    CPPUNIT_TEST(testDivisionFailure);
+    CPPUNIT_TEST(testDivisionNegative);
     CPPUNIT_TEST_SUITE_END();
 
 public:
@@ -35,10 +43,18 @@ public:
     void tearDown(void);
 
 protected:
-    void testAddition(void);
-    void testSubtraction(void);
-    void testMultiply(void);
-    void testDivision(void);
+    void testAdditionSuccess(void);
+    void testAdditionFailure(void);
+    void testAdditionNegative(void);
+    void testSubtractionSuccess(void);
+    void testSubtractionFailure(void);
+    void testSubtractionNegative(void);
+    void testMultiplySuccess(void);
+    void testMultiplyFailure(void);
+    void testMultiplyNegative(void);
+    void testDivisionSuccess(void);
+    void testDivisionFailure(void);
+    void testDivisionNegative(void);
 
 private:
 
@@ -48,51 +64,76 @@ private:
 //-----------------------------------------------------------------------------
 
 void
-TestBasicMath::testAddition(void)
+TestBasicMath::testAdditionSuccess(void)
 {
     CPPUNIT_ASSERT(5 == mTestObj->Addition(2, 3));
 }
 
-/*
 void
-TestBasicMath::testAddition(void)
+TestBasicMath::testAdditionFailure(void)
 {
     CPPUNIT_ASSERT(7 == mTestObj->Addition(2, 3));
 }
-*/
+
 void
-TestBasicMath::testSubtraction(void)
+TestBasicMath::testAdditionNegative(void)
+{
+    CPPUNIT_ASSERT(-5 == mTestObj->Addition(-12, 7));
+}
+
+void
+TestBasicMath::testSubtractionSuccess(void)
 {
     CPPUNIT_ASSERT(5 == mTestObj->Subtraction(10, 5));
 }
 
-/*
 void
-TestBasicMath::testSubtraction(void)
+TestBasicMath::testSubtractionFailure(void)
 {
-    CPPUNIT_ASSERT(7 == mTestObj->Addition(12, 3));
+    CPPUNIT_ASSERT(7 == mTestObj->Subtraction(12, 3));
 }
-*/
 
 void
-TestBasicMath::testMultiply(void)
+TestBasicMath::testSubtractionNegative(void)
+{
+    CPPUNIT_ASSERT(7 == mTestObj->Subtraction(12, 3));
+}
+
+void
+TestBasicMath::testMultiplySuccess(void)
 {
     CPPUNIT_ASSERT(6 == mTestObj->Multiply(2, 3));
 }
 
 void
-TestBasicMath::testDivision(void)
+TestBasicMath::testMultiplyFailure(void)
+{
+    CPPUNIT_ASSERT(6 == mTestObj->Multiply(2, 3));
+}
+
+void
+TestBasicMath::testMultiplyNegative(void)
+{
+    CPPUNIT_ASSERT(6 == mTestObj->Multiply(2, 3));
+}
+
+void
+TestBasicMath::testDivisionSuccess(void)
 {
     CPPUNIT_ASSERT(6 == mTestObj->Division(36, 6));
 }
 
-/*
 void
-TestBasicMath::testDivision(void)
+TestBasicMath::testDivisionFailure(void)
 {
     CPPUNIT_ASSERT(7 == mTestObj->Multiply(36, 6));
 }
-*/
+
+void
+TestBasicMath::testDivisionNegative(void)
+{
+    CPPUNIT_ASSERT(7 == mTestObj->Multiply(36, 6));
+}
 
 void TestBasicMath::setUp(void)
 {
