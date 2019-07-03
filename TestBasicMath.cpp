@@ -72,7 +72,7 @@ TestBasicMath::testAdditionSuccess(void)
 void
 TestBasicMath::testAdditionFailure(void)
 {
-    CPPUNIT_ASSERT(7 == mTestObj->Addition(2, 3));
+    CPPUNIT_ASSERT(7 != mTestObj->Addition(2, 3));
 }
 
 void
@@ -90,13 +90,13 @@ TestBasicMath::testSubtractionSuccess(void)
 void
 TestBasicMath::testSubtractionFailure(void)
 {
-    CPPUNIT_ASSERT(7 == mTestObj->Subtraction(12, 3));
+    CPPUNIT_ASSERT(9 != mTestObj->Subtraction(12, 4));
 }
 
 void
 TestBasicMath::testSubtractionNegative(void)
 {
-    CPPUNIT_ASSERT(7 == mTestObj->Subtraction(12, 3));
+    CPPUNIT_ASSERT(-15 == mTestObj->Subtraction(-12, 3));
 }
 
 void
@@ -108,13 +108,13 @@ TestBasicMath::testMultiplySuccess(void)
 void
 TestBasicMath::testMultiplyFailure(void)
 {
-    CPPUNIT_ASSERT(6 == mTestObj->Multiply(2, 3));
+    CPPUNIT_ASSERT(6 != mTestObj->Multiply(12, 3));
 }
 
 void
 TestBasicMath::testMultiplyNegative(void)
 {
-    CPPUNIT_ASSERT(6 == mTestObj->Multiply(2, 3));
+    CPPUNIT_ASSERT(-6 == mTestObj->Multiply(2, -3));
 }
 
 void
@@ -126,13 +126,13 @@ TestBasicMath::testDivisionSuccess(void)
 void
 TestBasicMath::testDivisionFailure(void)
 {
-    CPPUNIT_ASSERT(7 == mTestObj->Multiply(36, 6));
+    CPPUNIT_ASSERT(7 != mTestObj->Division(36, 6));
 }
 
 void
 TestBasicMath::testDivisionNegative(void)
 {
-    CPPUNIT_ASSERT(7 == mTestObj->Multiply(36, 6));
+    CPPUNIT_ASSERT(-6 == mTestObj->Division(-36, 6));
 }
 
 void TestBasicMath::setUp(void)
