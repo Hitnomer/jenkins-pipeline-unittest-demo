@@ -1,71 +1,30 @@
 <?xml version="1.0" encoding='ISO-8859-1' standalone='yes' ?>
 <TestRun>
-  <FailedTests>
-    <FailedTest id="2">
-      <Name>TestBasicMath::testAdditionFailure</Name>
-      <FailureType>Assertion</FailureType>
-      <Location>
-        <File>TestBasicMath.cpp</File>
-        <Line>75</Line>
-      </Location>
-      <Message>assertion failed
-- Expression: 7 == mTestObj-&gt;Addition(2, 3)
-</Message>
-    </FailedTest>
-    <FailedTest id="4">
-      <Name>TestBasicMath::testSubtractionSuccess</Name>
-      <FailureType>Assertion</FailureType>
-      <Location>
-        <File>TestBasicMath.cpp</File>
-        <Line>87</Line>
-      </Location>
-      <Message>assertion failed
-- Expression: 7 == mTestObj-&gt;Subtraction(10, 5)
-</Message>
-    </FailedTest>
-    <FailedTest id="5">
-      <Name>TestBasicMath::testSubtractionFailure</Name>
-      <FailureType>Assertion</FailureType>
-      <Location>
-        <File>TestBasicMath.cpp</File>
-        <Line>93</Line>
-      </Location>
-      <Message>assertion failed
-- Expression: 9 == mTestObj-&gt;Subtraction(12, 4)
-</Message>
-    </FailedTest>
-    <FailedTest id="6">
-      <Name>TestBasicMath::testSubtractionNegative</Name>
-      <FailureType>Assertion</FailureType>
-      <Location>
-        <File>TestBasicMath.cpp</File>
-        <Line>99</Line>
-      </Location>
-      <Message>assertion failed
-- Expression: -15 != mTestObj-&gt;Subtraction(-12, 3)
-</Message>
-    </FailedTest>
-    <FailedTest id="8">
-      <Name>TestBasicMath::testMultiplyFailure</Name>
-      <FailureType>Assertion</FailureType>
-      <Location>
-        <File>TestBasicMath.cpp</File>
-        <Line>111</Line>
-      </Location>
-      <Message>assertion failed
-- Expression: 6 == mTestObj-&gt;Multiply(12, 3)
-</Message>
-    </FailedTest>
-  </FailedTests>
+  <FailedTests></FailedTests>
   <SuccessfulTests>
     <Test id="1">
       <Name>TestBasicMath::testAdditionSuccess</Name>
     </Test>
+    <Test id="2">
+      <Name>TestBasicMath::testAdditionFailure</Name>
+    </Test>
     <Test id="3">
       <Name>TestBasicMath::testAdditionNegative</Name>
     </Test>
+    <Test id="4">
+      <Name>TestBasicMath::testSubtractionSuccess</Name>
+    </Test>
+    <Test id="5">
+      <Name>TestBasicMath::testSubtractionFailure</Name>
+    </Test>
+    <Test id="6">
+      <Name>TestBasicMath::testSubtractionNegative</Name>
+    </Test>
     <Test id="7">
       <Name>TestBasicMath::testMultiplySuccess</Name>
+    </Test>
+    <Test id="8">
+      <Name>TestBasicMath::testMultiplyFailure</Name>
     </Test>
     <Test id="9">
       <Name>TestBasicMath::testMultiplyNegative</Name>
@@ -82,8 +41,8 @@
   </SuccessfulTests>
   <Statistics>
     <Tests>12</Tests>
-    <FailuresTotal>5</FailuresTotal>
+    <FailuresTotal>0</FailuresTotal>
     <Errors>0</Errors>
-    <Failures>5</Failures>
+    <Failures>0</Failures>
   </Statistics>
 </TestRun>
